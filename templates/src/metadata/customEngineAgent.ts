@@ -55,4 +55,11 @@ export const customEngineAgentTemplates: Template[] = [
     displayName: getString("template.customEngineAgent.travel.label"),
     description: getString("template.customEngineAgent.travel.detail"),
   },
+  {
+    id: "my-new-agent-ts",
+    name: TemplateNames.MyNewAgent,
+    language: "typescript",
+    displayName: getString("template.customEngineAgent.myNew.label"),
+    description: getString("template.customEngineAgent.myNew.detail"),
+  },
 ];

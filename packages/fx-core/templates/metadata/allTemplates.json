@@ -175,6 +175,13 @@
     "description": "A travel planning agent, which is built with Microsoft 365 Agents SDK, Microsoft 365 Retrieval API and Agent Framework"
   },
   {
+    "id": "my-new-agent-ts",
+    "name": "my-new-agent",
+    "language": "typescript",
+    "displayName": "My New Agent",
+    "description": "My new agent template for demonstration purposes"
+  },
+  {
     "id": "graph-connector-ts",
     "name": "graph-connector",
     "language": "typescript",
