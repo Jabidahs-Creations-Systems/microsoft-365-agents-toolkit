@@ -22,7 +22,7 @@
                 "Validate prerequisites (Microsoft 365 Agents Playground)",
                 "Deploy (Microsoft 365 Agents Playground)",
                 "Start application (Microsoft 365 Agents Playground)",
-                "Start Microsoft 365 Agents Playground",
+Start Microsoft 365 Agents Playground
             ],
             "dependsOrder": "sequence"
         },
@@ -40,7 +40,7 @@
                 "portOccupancy": [
                     3978, // app service port
                     9239, // app inspector port for Node.js debugger
-                    56150, // Microsoft 365 Agents Playground port
+                    56150 // Microsoft 365 Agents Playground port
                 ]
             }
         },
@@ -51,7 +51,7 @@
             "type": "teamsfx",
             "command": "deploy",
             "args": {
-                "env": "playground",
+                "env": "playground"
             }
         },
         {
@@ -60,7 +60,7 @@
             "command": "npm run dev:teamsfx:playground",
             "isBackground": true,
             "options": {
-                "cwd": "${workspaceFolder}",
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": {
                 "pattern": [
@@ -226,7 +226,7 @@
             "type": "teamsfx",
             "command": "provision",
             "args": {
-                "env": "sandbox",
+                "env": "sandbox"
             }
         },
         {
@@ -307,7 +307,7 @@
             "command": "install-app",
             "args": {
                 "env": "sandbox",
-                "appPackagePath": "${workspaceFolder}/appPackage/build/appPackage.sandbox.zip",
+                "appPackagePath": "${workspaceFolder}/appPackage/build/appPackage.sandbox.zip"
             }
         }
     ]

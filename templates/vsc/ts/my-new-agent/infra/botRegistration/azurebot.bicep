@@ -23,8 +23,8 @@ resource botService 'Microsoft.BotService/botServices@2021-03-01' = {
     endpoint: 'https://${botAppDomain}/api/messages'
     msaAppId: identityClientId
     msaAppMSIResourceId: identityResourceId
-    msaAppTenantId:identityTenantId
-    msaAppType:'UserAssignedMSI'
+    msaAppTenantId: identityTenantId
+    msaAppType: 'UserAssignedMSI'
   }
   sku: {
     name: botServiceSku
