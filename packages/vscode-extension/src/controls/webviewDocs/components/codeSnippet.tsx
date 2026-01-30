@@ -22,6 +22,9 @@ export default function CodeSnippet(props: {
 }) {
   const [copied, setCopied] = React.useState(false);
 
+  // Replace null characters with a visible symbol to prevent clipboard corruption
+  const safeText = React.useMemo(() => props.data.replace(/\u0000/g, '\u25A1'), [props.data]);
+
   React.useEffect(() => {
     const timeout = setTimeout(() => {
       if (copied) {
@@ -61,9 +64,6 @@ export default function CodeSnippet(props: {
       </div>
     );
   }
-
-  // Replace null characters with a visible symbol to prevent clipboard corruption
-  const safeText = props.data.replace(/\u0000/g, '\u25A1');
 
   return (
     <div className="codeSnippet">
