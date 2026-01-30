@@ -62,10 +62,13 @@ export default function CodeSnippet(props: {
     );
   }
 
+  // Replace null characters with a visible symbol to prevent clipboard corruption
+  const safeText = props.data.replace(/\u0000/g, '\u25A1');
+
   return (
     <div className="codeSnippet">
       <div className="codeTitle">
-        <CopyToClipboard text={props.data} onCopy={onCopyCode}>
+        <CopyToClipboard text={safeText} onCopy={onCopyCode}>
           {copyButton}
         </CopyToClipboard>
       </div>
