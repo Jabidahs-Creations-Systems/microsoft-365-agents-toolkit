@@ -28,11 +28,15 @@ M365 Agents Toolkit MCP Server is designed to help you:
 2. Install either the stable or Insiders release of VS Code:
    * [💫 Stable release](https://code.visualstudio.com/download)
    * [🔮 Insiders release](https://code.visualstudio.com/insiders)
-3. Install the [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) and [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) extensions
+3. Install one of the supported AI extensions:
+   * [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) and [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)
+   * [Claude for VS Code](https://code.claude.com/docs/en/vs-code) (Claude Code extension)
+
+### GitHub Copilot
 
 #### Manual Install
 
-For a step-by-step guide to install the Microsoft 365 Agents Toolkit MCP Server, follow these instructions:
+For a step-by-step guide to install the Microsoft 365 Agents Toolkit MCP Server with GitHub Copilot, follow these instructions:
 
 - Add `.vscode/mcp.json`:
     ```json
@@ -60,7 +64,36 @@ For a step-by-step guide to install the Microsoft 365 Agents Toolkit MCP Server,
 
 - Click `refresh` on the tools list.
 
-#### For Visual Studio
+### Claude AI (Claude Code)
+
+The Microsoft 365 Agents Toolkit MCP Server also works with [Claude for VS Code](https://code.claude.com/docs/en/vs-code).
+
+#### Manual Install
+
+Add a `.mcp.json` file at your project root:
+
+```json
+{
+    "mcpServers": {
+        "M365AgentsToolkit Server": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@microsoft/m365agentstoolkit-mcp@latest",
+                "server",
+                "start"
+            ]
+        }
+    }
+}
+```
+
+#### List The Tools
+
+- Open Claude Code in VS Code.
+- Claude Code will automatically discover the MCP server from `.mcp.json` and make the tools available.
+
+### For Visual Studio
 
 Manual configuration required, please follow: [Visual Studio MCP Official Guide](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022)
 
